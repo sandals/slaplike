@@ -1,0 +1,74 @@
+$border-radius: 3px;
+
+.artist {
+  border-radius: $border-radius;
+  box-shadow: 0 2px 5px rgba(0,0,0,.10);
+  background: whitesmoke;
+  width: 60%;
+  margin: 0 auto;
+  margin-bottom: 2em;
+}
+.artist-info {
+  position: relative;
+  &::after {
+    clear: both;
+    content: '';
+    display: table;
+  }
+}
+.info-name {
+  float: right;
+  width: 80%;
+
+  h3 {
+    margin: 1em;
+    font-size: 1.3em;
+  }
+}
+.info-actions {
+  float: right;
+  width: 10%;
+
+  a {
+    display: block;
+    margin: 1em 0;
+    color: #E01A4F;
+    font-size: 1.3em;
+    text-align: center;
+    text-decoration: none;
+  }
+}
+.info-image {
+  float: left;
+  width: 10%;
+  height: 100%;
+  background: red;
+
+  img {
+    display: block;
+    max-width: 100%;
+    border-top-left-radius: $border-radius;
+  }
+}
+.artist-video {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+
+  iframe, object, embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  &:last-child {
+    iframe, object, embed {
+      border-bottom-left-radius: $border-radius;
+      border-bottom-right-radius: $border-radius;
+    }
+  }
+}

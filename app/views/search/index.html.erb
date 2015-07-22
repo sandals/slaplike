@@ -1,0 +1,16 @@
+<div class="index-container">
+  <p class="tagline">
+  Slaplike enables you to find new music that is similar to artists you already enjoy.
+  </p>
+  <%= form_tag('/search', method: :post, class: 'search-form') do %>
+    <%= label_tag :terms, 'Search for an artist you like:' %>
+    <div class="search-bar">
+      <%= text_field_tag :terms, nil,
+        placeholder: 'Try Lil B, or Speedy Ortiz', required: true %>
+    </div>
+    <div class="search-btn">
+      <%= submit_tag 'Search', class: 'js-search-button' %>
+    </div>
+  <% end %>
+  <p class="tagline js-search-alert" style="text-align: center; font-size: 0.9em;"></p>
+</div>

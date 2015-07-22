@@ -1,0 +1,21 @@
+<h2 class="results">Artists Similar to <%= @search.terms.titlecase %></h2>
+<% @search.results.each do |artist, youtube_ids| %>
+  <div class="artist">
+    <div class="artist-info">
+      <div class="info-actions">
+        <%= link_to '&#9825;'.html_safe, '#' %>
+      </div>
+      <div class="info-name">
+        <h3><%= artist['name'] %></h3>
+      </div>
+      <div class="info-image">
+        <%= image_tag(artist['image'][2]['#text']) %>
+      </div>
+    </div>
+    <% youtube_ids.each do |id| %>
+      <div class="artist-video">
+        <%= youtube_embed(id) %>
+      </div>
+    <% end %>
+  </div>
+<% end %>
