@@ -1,8 +1,10 @@
+require 'uri'
+
 class SearchController < ApplicationController
   def index
   end
 
   def results
-    @search = Search.new(terms: params[:terms])
+    @search = Search.new(terms: URI.escape(params[:terms]))
   end
 end
