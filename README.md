@@ -2,7 +2,8 @@ Slaplike
 ========
 
 Slaplike is a small rails application that allows you to find music that is
-similar to artists you already like!
+similar to artists you already like! [Click here to see a live version of
+Slaplike](https://radiant-forest-4204.herokuapp.com/).
 
 Installing
 ----------
